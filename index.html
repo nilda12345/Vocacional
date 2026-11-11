@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orientación Vocacional - Tupiza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <div class="logo">🎓 OrientaTupiza</div>
+      <div class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#carreras">Carreras</a>
+        <a href="#test">Test vocacional</a>
+        <a href="#guia">Guía</a>
+        <a href="#nosotros">Proyecto</a>
+      </div>
+    </nav>
+
+    <section id="inicio" class="hero-content">
+      <div>
+        <span class="tag">Para estudiantes de 6to de secundaria</span>
+        <h1>Descubre qué camino puede ir contigo</h1>
+        <p>
+          Una herramienta interactiva para conocer tus intereses, habilidades
+          y algunas opciones de carreras profesionales.
+        </p>
+        <a class="btn" href="#test">Comenzar test</a>
+      </div>
+      <div class="hero-card">
+        <div class="big-icon">🧭</div>
+        <h3>Tu futuro empieza con una decisión</h3>
+        <p>Conócete mejor y explora tus posibilidades.</p>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section intro">
+      <h2>¿Para qué sirve esta página?</h2>
+      <p>
+        Esta página fue diseñada para apoyar a estudiantes de sexto de secundaria
+        del municipio de Tupiza en su orientación vocacional. Aquí puedes explorar
+        carreras y realizar un pequeño test interactivo como guía inicial.
+      </p>
+      <div class="info-grid">
+        <div class="info-card"><span>🧠</span><h3>Conócete</h3><p>Identifica intereses y habilidades que te llaman la atención.</p></div>
+        <div class="info-card"><span>🔎</span><h3>Explora</h3><p>Conoce diferentes áreas y carreras profesionales.</p></div>
+        <div class="info-card"><span>🚀</span><h3>Proyéctate</h3><p>Obtén una orientación inicial para pensar en tu futuro.</p></div>
+      </div>
+    </section>
+
+    <section id="carreras" class="section">
+      <div class="section-title">
+        <h2>🎓 Explora carreras universitarias</h2>
+        <p>Selecciona una carrera para conocer qué se estudia, qué materias puedes encontrar, dónde puedes trabajar y opciones para estudiarla en Bolivia.</p>
+      </div>
+      <div class="career-grid">
+        <article class="career-card" onclick="showCareer('derecho')"><div class="career-icon">⚖️</div><h3>Derecho</h3><p>Leyes, justicia, asesoría y defensa de derechos.</p><button>Ver información</button></article>
+        <article class="career-card" onclick="showCareer('medicina')"><div class="career-icon">🩺</div><h3>Medicina</h3><p>Prevención, diagnóstico y atención de la salud.</p><button>Ver información</button></article>
+        <article class="career-card" onclick="showCareer('enfermeria')"><div class="career-icon">🏥</div><h3>Enfermería</h3><p>Cuidado y atención integral de pacientes.</p><button>Ver información</button></article>
+        <article class="career-card" onclick="showCareer('software')"><div class="career-icon">💻</div><h3>Ingeniería de Sistemas / Software</h3><p>Programación, sistemas, aplicaciones y tecnología.</p><button>Ver información</button></article>
+        <article class="career-card" onclick="showCareer('civil')"><div class="career-icon">🏗️</div><h3>Ingeniería Civil</h3><p>Construcción, estructuras, carreteras y obras.</p><button>Ver información</button></article>
+        <article class="career-card" onclick="showCareer('contaduria')"><div class="career-icon">🧾</div><h3>Contaduría Pública</h3><p>Contabilidad, auditoría, impuestos y finanzas.</p><button>Ver información</button></article>
+        <article class="career-card" onclick="showCareer('administracion')"><div class="career-icon">📈</div><h3>Administración de Empresas</h3><p>Gestión, emprendimiento, recursos y organizaciones.</p><button>Ver información</button></article>
+        <article class="career-card" onclick="showCareer('economia')"><div class="career-icon">💰</div><h3>Economía</h3><p>Análisis económico, mercados, políticas y planificación.</p><button>Ver información</button></article>
+        <article class="career-card" onclick="showCareer('educacion')"><div class="career-icon">📚</div><h3>Educación / Ciencias de la Educación</h3><p>Enseñanza, aprendizaje y formación.</p><button>Ver información</button></article>
+        <article class="career-card" onclick="showCareer('psicologia')"><div class="career-icon">🧠</div><h3>Psicología</h3><p>Comportamiento, desarrollo y bienestar psicológico.</p><button>Ver información</button></article>
+        <article class="career-card" onclick="showCareer('agronomia')"><div class="career-icon">🌱</div><h3>Agronomía</h3><p>Producción agrícola, suelos, cultivos y recursos naturales.</p><button>Ver información</button></article>
+        <article class="career-card" onclick="showCareer('comunicacion')"><div class="career-icon">🎙️</div><h3>Comunicación Social</h3><p>Periodismo, medios, comunicación institucional y digital.</p><button>Ver información</button></article>
+      </div>
+      <div id="careerInfo" class="career-info hidden"></div>
+    </section>
+
+    <section id="guia" class="section guide">
+      <div class="section-title"><h2>📍 Estudiar en Bolivia</h2><p>La oferta académica cambia según la gestión. Antes de postular, revisa la convocatoria y el plan de estudios de cada universidad.</p></div>
+      <div class="guide-grid">
+        <div class="guide-card"><h3>🏛️ Universidades públicas</h3><p>Entre las principales universidades públicas están la UMSA (La Paz), UMSS (Cochabamba), UAGRM (Santa Cruz), UATF (Potosí), USFX (Chuquisaca), UAJMS (Tarija), UTO (Oruro), UABJB (Beni) y UAP (Pando).</p></div>
+        <div class="guide-card"><h3>🏫 Universidades privadas</h3><p>También existen universidades privadas con distintas carreras y modalidades. La disponibilidad, costos, sedes y requisitos dependen de cada institución y de la gestión.</p></div>
+        <div class="guide-card"><h3>📌 ¿Qué debes comparar?</h3><p>Plan de estudios, duración, modalidad, sede, requisitos de ingreso, costos, becas, prácticas profesionales, infraestructura y oportunidades laborales.</p></div>
+        <div class="guide-card"><h3>🗺️ Si vives en Tupiza</h3><p>Puedes investigar opciones en Tupiza y Potosí, y también considerar La Paz, Sucre, Cochabamba, Oruro, Tarija o Santa Cruz según la carrera y tus posibilidades.</p></div>
+      </div>
+    </section>
+
+    <section id="test" class="section test-section">
+      <div class="section-title">
+        <h2>🧠 Test vocacional</h2>
+        <p>Responde con sinceridad. El resultado es una guía inicial, no una decisión definitiva.</p>
+      </div>
+
+      <form id="vocationalTest">
+        <div class="question">
+          <h3>1. ¿Qué actividad te interesa más?</h3>
+          <label><input type="radio" name="q1" value="tech" required> Crear programas o usar tecnología</label>
+          <label><input type="radio" name="q1" value="people"> Ayudar o enseñar a otras personas</label>
+          <label><input type="radio" name="q1" value="business"> Organizar proyectos o negocios</label>
+          <label><input type="radio" name="q1" value="science"> Investigar y resolver problemas científicos</label>
+        </div>
+
+        <div class="question">
+          <h3>2. ¿Cuál de estas habilidades te representa más?</h3>
+          <label><input type="radio" name="q2" value="tech" required> Resolver problemas con tecnología</label>
+          <label><input type="radio" name="q2" value="people"> Escuchar y comunicarme</label>
+          <label><input type="radio" name="q2" value="business"> Liderar y organizar</label>
+          <label><input type="radio" name="q2" value="science"> Analizar y experimentar</label>
+        </div>
+
+        <div class="question">
+          <h3>3. ¿Qué tipo de trabajo te gustaría realizar?</h3>
+          <label><input type="radio" name="q3" value="tech" required> Trabajar con computadoras y sistemas</label>
+          <label><input type="radio" name="q3" value="people"> Trabajar directamente con personas</label>
+          <label><input type="radio" name="q3" value="business"> Dirigir equipos o emprendimientos</label>
+          <label><input type="radio" name="q3" value="science"> Investigar y encontrar soluciones</label>
+        </div>
+
+        <div class="question">
+          <h3>4. ¿Qué te gustaría aprender?</h3>
+          <label><input type="radio" name="q4" value="tech" required> Programación y herramientas digitales</label>
+          <label><input type="radio" name="q4" value="people"> Educación, comunicación o atención</label>
+          <label><input type="radio" name="q4" value="business"> Economía, administración o negocios</label>
+          <label><input type="radio" name="q4" value="science"> Ciencia, investigación o ingeniería</label>
+        </div>
+
+        <div class="question">
+          <h3>5. ¿Qué situación prefieres?</h3>
+          <label><input type="radio" name="q5" value="tech" required> Crear una solución digital</label>
+          <label><input type="radio" name="q5" value="people"> Ayudar a alguien a aprender</label>
+          <label><input type="radio" name="q5" value="business"> Planificar un proyecto</label>
+          <label><input type="radio" name="q5" value="science"> Resolver un problema complejo</label>
+        </div>
+
+        <div class="question">
+          <h3>6. ¿Qué área te llama más la atención?</h3>
+          <label><input type="radio" name="q6" value="tech" required> Tecnología e informática</label>
+          <label><input type="radio" name="q6" value="people"> Educación y sociedad</label>
+          <label><input type="radio" name="q6" value="business"> Empresas y emprendimiento</label>
+          <label><input type="radio" name="q6" value="science"> Ciencia y salud</label>
+        </div>
+
+        <div class="question">
+          <h3>7. ¿Cómo te gusta trabajar?</h3>
+          <label><input type="radio" name="q7" value="tech" required> Creando y probando soluciones</label>
+          <label><input type="radio" name="q7" value="people"> En equipo y ayudando a otros</label>
+          <label><input type="radio" name="q7" value="business"> Coordinando actividades</label>
+          <label><input type="radio" name="q7" value="science"> Analizando información</label>
+        </div>
+
+        <div class="question">
+          <h3>8. ¿Qué te gustaría aportar en el futuro?</h3>
+          <label><input type="radio" name="q8" value="tech" required> Crear soluciones tecnológicas</label>
+          <label><input type="radio" name="q8" value="people"> Contribuir a la formación de personas</label>
+          <label><input type="radio" name="q8" value="business"> Generar proyectos y oportunidades</label>
+          <label><input type="radio" name="q8" value="science"> Aportar mediante la investigación</label>
+        </div>
+
+        <button class="btn test-btn" type="submit">Ver mi resultado</button>
+      </form>
+
+      <div id="result" class="result hidden"></div>
+    </section>
+
+    <section id="nosotros" class="section project">
+      <div>
+        <h2>Sobre este proyecto</h2>
+        <p>
+          Proyecto de grado: <strong>“Diseño de una página web interactiva de
+          orientación vocacional para estudiantes de sexto de secundaria del
+          municipio de Tupiza”</strong>.
+        </p>
+        <p>
+          La propuesta busca ofrecer una herramienta accesible, sencilla y dinámica
+          que ayude a los estudiantes a conocer sus intereses y explorar opciones
+          académicas.
+        </p>
+      </div>
+      <div class="author-box">
+        <span>👨‍💻</span>
+        <h3>Autor</h3>
+        <p>Oscar Rodrigo Flores Mamani</p>
+        <p>6to de secundaria</p>
+        <p>Tupiza - Bolivia</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 OrientaTupiza · Proyecto de orientación vocacional</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
